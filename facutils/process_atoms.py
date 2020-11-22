@@ -1,3 +1,7 @@
+from dataclasses import dataclass
+from typing import List
+
+
 class ProcessIOAtom:
     def __init__(self, item_lua):
         item_list = ProcessIOAtom._quantity_to_list(item_lua)

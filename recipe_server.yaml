@@ -1,0 +1,19 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: recipe-server
+spec:
+  selector:
+    matchLabels:
+      app: recipe-server
+  replicas: 2 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: recipe-server
+    spec:
+      containers:
+      - name: recipe-server
+        image: # Change me
+        ports:
+        - containerPort: 80
